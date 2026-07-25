@@ -3,18 +3,26 @@
   "version": "0.0.1",
   "description": "game framework",
   "private": true,
+  "engines": {
+    "node": "22"
+  },
   "scripts": {
+    "postinstall": "bower install",
     "start": "NODE_PORT=3000 NODE_GAMECONF=/config/parts/tank.js NODE_ENV=development nodemon server.js"
   },
   "dependencies": {
-    "socket.io": "~0.9.16",
-    "express": "~3.3.4",
-    "jade": "~1.1.4",
-    "winston": "~0.7.2",
-    "node-uuid": "*",
     "async": "*",
     "connect-mongo": "*",
+    "express": "~3.3.4",
+    "jade": "~1.1.4",
+    "node-uuid": "*",
+    "socket.io": "~0.9.16",
+    "string": "*",
     "validator": "*",
-    "string": "*"
+    "winston": "~0.7.2"
+  },
+  "devDependencies": {
+    "bower": "^1.8.14",
+    "nodemon": "^3.1.14"
   }
 }
